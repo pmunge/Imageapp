@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>imageimage</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <header id="nav-menu">
+        <div class="container">
+          <div class="nav-start">
+            <a class="logo" href="/">
+              <img src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/logo.png?raw=true" 
+                   width="35" 
+                   height="35" 
+                   alt="Inc Logo"
+                />
+            </a>
+            <nav class="menu">
+              <button id="hamburger" aria-expanded="false">
+                <i class="bx bx-menu" aria-hidden="true"></i>
+              </button>
+              <div class="nav-end">
+                <div class="right-container">
+                  <form class="search" role="search">
+                    <input type="search" name="search" placeholder="Search" />
+                    <i class="bx bx-search" aria-hidden="true"></i>
+                  </form>
+          
+                  <a href="#profile">
+                    <img src="img1.jpg" 
+                         width="30" 
+                         height="30" 
+                         alt="user image" 
+                      />
+                  </a>
+                </div>
+              <div class="menu">
+                  <ul class="menu-bar">
+                      <li>
+                          <button 
+                            class="nav-link dropdown-btn" 
+                            data-dropdown="dropdown1" 
+                            aria-expanded="false">
+                              Discover
+                            <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                          </button>
+                          <div id="dropdown1" class="dropdown"><ul aria-labelledby="categories-title">
+                            <span id="categories-title" class="dropdown-link-title">nature</span>
+                            <li>
+                              <a class="dropdown-link" href="#forests">forests and plants</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-link" href="#animals">animals</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-link" href="#sunsets"> sunsets</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-link" href="#sunrise"> sunrise</a>
+                            </li>
+                          </ul>
+                          <ul aria-labelledby="download-title">
+                            <span id="download-title" class="dropdown-link-title">manmade</span>
+                            <li>
+                              <a class="dropdown-link" href="#cities/towns">cities and towns</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-link" href="#cars">cars</a>
+                            </li>
+                            <li>
+                              <a class=" dropdownlink" href="#buildings"> buildings</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                          <button 
+                            class="nav-link dropdown-btn" 
+                            data-dropdown="dropdown2" 
+                            aria-expanded="false">
+                              log in
+                            <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                          </button>
+                          <div id="dropdown2" class="dropdown"></div>
+                      </li>
+                      <li><a class="nav-link" href="image.html/">upload</a></li>
+                      <li><a class="nav-link" href="/">Livestream</a></li>
+                      <li><a class="nav-link" href="/">About</a></li>
+                  </ul>
+              </div>
+          </nav>
+          </div>
+      
+          </div>
+        </div>
+      </header>
+      <script src="script.js"></script>
+    </body>
+</html>
