@@ -5,11 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Upload</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+  
+    #uploadForm {
+      height: 100%;
+      margin: 0;
+      display: absolute;
+      justify-content: left;
+      align-items: left;
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
+  <div id="profile">
+    <a href="#profile">
+      <img src="img1.jpg" 
+           width="30" 
+           height="30" 
+           alt="user image" 
+        />
+    </a>
+  </div>
   <div id="uploadForm">
+    <label id="imlabel"> Upload Images</label><br><br>
     <input type="file" id="fileInput" multiple>
-    <button onclick="uploadImages()">Upload Images</button>
+    <button id="uploadbtn" onclick="uploadImages()">Upload</button>
   </div>
   <div id="imageContainer"></div>
   <script src="script.js"></script>

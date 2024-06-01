@@ -77,3 +77,41 @@ links.forEach((link) =>
   })
 );
 hamburgerBtn.addEventListener("click", toggleHamburger);
+
+function uploadImages() {
+  const fileInput = document.getElementById('fileInput');
+  const files = fileInput.files;
+  if (files.length === 0) {
+    alert('Please select at least one image.');
+    return;
+  }
+  // Only the owner can upload images (for demonstration purpose, using a hardcoded owner ID)
+  const ownerId = 'owner123';
+  // Check if the uploader is the owner
+  const uploaderId = prompt('Please enter your ID:');
+  if (uploaderId !== ownerId) {
+    alert('You are not authorized to upload images.');
+    return;
+  }
+  const imageContainer = document.getElementById('imageContainer');
+  // Loop through selected files
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    // Check if the file is an image
+    if (!file.type.startsWith('image/')) {
+      alert('Please select only images.');
+      continue;
+    }
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      // Create image preview
+      const imagePreview = document.createElement('div');
+      imagePreview.classList.add('image-preview');
+      const img = document.createElement('img');
+      img.src = event.target.result;
+      imagePreview.appendChild(img);
+      imageContainer.appendChild(imagePreview);
+    }
+    reader.readAsDataURL(file);
+  }
+}
