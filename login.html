@@ -8,28 +8,43 @@
 </head>
 <body>
   <div>
-    <h1> create a profile</h1>
-    <form action="http://127.0.0.1:5500/reminder/image.html">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
-    <label for="password">Password:</label>
-    <input  type="text" id="password" name="password"  required>
-    <br>
-    <label for="username">Username: </label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <input type="submit" value="Submit">
+    <h3>login</h3>
+    <formform ="Login_form" onsubmit="submit_form()"></formform>
+    <form action="http://127.0.0.1:5500/reminder/image.html" class="row g-3">
+     <div class="col-md-6"></div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+     </div>
+     <div class="col-md-6">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+     </div>
+     <div class="col-12">
+      <label for="password">Password:</label>
+      <input  type="text" id="password" name="password"  required>
+    </div>
+    <div class="col-12">
+      <label for="username">Username: </label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">login</button>
+    </div>  
+    
     </form>
    </div>
  <div id="container">
-    <a href="image.html">
-    <button type="button" class="btn btn-primary">next</button>
+    <a href="signup.html">
+    <button type="button" class="btn btn-primary">sign up</button>
     </a>
  </div>
-  <script src="script.js"></script>
+  <script type="text/javascript">
+    function submit_form(){  
+alert("Login successfully");  
+}  
+function create(){  
+window.location="signup.html";  
+}  
+  </script>
 </body>
 </html>
