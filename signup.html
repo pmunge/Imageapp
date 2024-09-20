@@ -1,21 +1,50 @@
 <html>  
 <head>  
-<title> SignUp Page</title>  
+<title> SignUp Page</title>
+<link rel="stylesheet" href="forms.css">  
 </head>  
-<body align="center" >  
-<h1> CREATE an ACCOUNT</h1>  
-<table cellspacing="2" align="center" cellpadding="8" border="0">  
-<tr><td> Name</td>   
-<td><input type="text" placeholder="Enter your name" id="n1"></td></tr>  
-<tr><td>Email </td>  
-<td><input type="text" placeholder="Enter your email id" id="e1"></td></tr>  
-<tr><td> Set Password</td>  
-<td><input type="password" placeholder="Set a password" id="p1"></td></tr>  
-<tr><td>Confirm Password</td>  
-<td><input type="password" placeholder="Confirm your password" id="p2"></td></tr>  
-<tr><td>  
-<input type="submit" value="Create" onClick="create_account()"/>  
-</table>  
+<body >
+        <div class="wrapper">
+                <form action="http://127.0.0.1:5500/imageapp/image.html" class="row g-3">
+                  <h1> Create an account</h1>
+                  <div class="inputbox">
+                    <input type="text" required>
+                    <label for="">Name</label>
+                  </div>
+                  <div class="inputbox">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                  </div>
+                  <div class="inputbox">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                  </div>
+                  <div class="inputbox">
+                    <input type="password" required>
+                    <label for="">Set password</label>
+                  </div>
+                  <div class="inputbox">
+                        <input type="text" required>
+                        <label for="">Confirm password</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">create account</button>
+                  <div class="register">
+                    <p>
+                      Already have an account?
+                      <a href="login.html">login</a>
+                    </p>
+                 </div>
+                  <script type="text/javascript">
+                    
+                    function submit_form(){  
+                alert("Login successfully");  
+                }  
+                function create(){  
+                window.location="signup.html";  
+                }  
+                  </script>
+                </form>
+              </div>
 <script type="text/javascript">  
 function create_account(){  
 var n=document.getElementById("n1").value;  
